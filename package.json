@@ -4,7 +4,7 @@
   "description": "",
   "main": "fahrenheit.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/MatildaMared/jest-testing/issues"
   },
-  "homepage": "https://github.com/MatildaMared/jest-testing#readme"
+  "homepage": "https://github.com/MatildaMared/jest-testing#readme",
+  "dependencies": {
+    "jest": "^27.4.3"
+  }
 }
