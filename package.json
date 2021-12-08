@@ -1,0 +1,19 @@
+{
+  "name": "jest-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fahrenheit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatildaMared/jest-testing.git"
+  },
+  "author": "Matilda Mared",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatildaMared/jest-testing/issues"
+  },
+  "homepage": "https://github.com/MatildaMared/jest-testing#readme"
+}
