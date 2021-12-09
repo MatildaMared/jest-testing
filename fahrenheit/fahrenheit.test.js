@@ -7,5 +7,5 @@ describe("function convertFahrenheitToCelsius", () => {
 		const actualTemperature = convertFahrenheitToCelsius(testData);
 
 		expect(actualTemperature).toBe(expectedTemperature);
-	});
+  });
 });
