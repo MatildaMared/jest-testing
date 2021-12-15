@@ -1,18 +1,16 @@
-const account = {
-	id: "900707",
-	balance: 0,
-};
-
 // Ökar saldot på kontot med amount. Alla flyttal (floating point, normala JavaScript number)
 // som rimligtvis kan tänkas motsvara ett pengabelopp är tillåtna värden.
 // Om funktionen får ett otillåtet tal som parameter ska den kasta ett Error med ett lämpligt felmeddelande.
-function deposit(account, amount) {
+function deposit (account, amount, bank) {
+	console.log(bank);
 	if (!isAccount(account)) {
 		throw new Error("Invalid account object");
 	} else if (!isValidNumber(amount)) {
 		throw new Error("Amount must be a valid number");
 	}
-	account.balance += amount;
+	const oldBalance = bank.getBalance();
+	bank.setBalance(oldBalance + amount);
+	// account.balance += amount;
 }
 
 function isAccount(maybeAccount) {
@@ -52,19 +50,4 @@ function withdraw(account, amount) {
 	account.balance -= amount;
 }
 
-// Genomför en transaktion: Minskar saldot på kontot med amount och ökar med motsvarande belopp på mottagarkontot,
-// förutsatt att inget har gått fel. Om transaktionen misslyckas ska funktionen returnera false.Tips: det kan bli fel av flera anledningar.
-function transfer(source, target, amount) {
-	if (!isAccount(source) || !isAccount(target)) {
-		return false;
-	} else if (!isValidNumber(amount)) {
-		return false;
-	} else if (source.balance < amount) {
-		return false;
-	}
-	source.balance -= amount;
-	target.balance += amount;
-	return true;
-}
-
-module.exports = { deposit, withdraw, transfer };
+module.exports = { deposit, withdraw };
